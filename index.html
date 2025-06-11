@@ -1,16 +1,196 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>LiveLab 4 Demo</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomadiq Travel Destinations</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #e6f2ef;
+      color: #264d3b;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #cce8dc;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1e6159;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e6159;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #319d7d;
+    }
+
+    .hero, .about, .cta, main {
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      margin: 20px;
+    }
+
+    .hero {
+      background-color: #d8f3e5;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2b5f4a;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #3d6b57;
+    }
+
+    .about {
+      background-color: #f0f9f5;
+    }
+
+    .about h3 {
+      font-size: 1.8rem;
+      color: #2b5f4a;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: #3d6b57;
+    }
+
+    .cta {
+      background-color: #d2efe7;
+    }
+
+    .cta h4 {
+      font-size: 1.8rem;
+      color: #225c4e;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      background-color: #3cb690;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button:hover {
+      background-color: #319d7d;
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: #264d3b;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+      }
+
+      .hero h2,
+      .about h3,
+      .cta h4,
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero p,
+      .about p,
+      main p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <header>
+    <div class="logo">Nomadiq Travel Destinations</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h2>Explore Sustainable Travel</h2>
+    <p>Embark on a journey that supports the planet. From eco-lodges to low-impact adventures, our destinations celebrate the beauty of nature and the importance of preserving it.</p>
+  </section>
+
+  <section class="about">
+    <h3>About Nomadiq Travel Destinations</h3>
+    <p>Nomadiq Travel Destinations is committed to promoting eco-conscious exploration. We aim to connect travelers with experiences that respect local communities and preserve our planet’s natural beauty. Our mission is to make every journey meaningful and sustainable.</p>
+  </section>
+
+  <section class="cta">
+    <h4>Ready to Plan Your Trip?</h4>
+    <button class="cta-button">Learn More</button>
+  </section>
+
+  <main>
+    <h1>Welcome to Nomadiq</h1>
+    <p>Discover eco-friendly travel destinations around the world, curated for conscious travelers like you.</p>
+  </main>
+</body>
 </html>
